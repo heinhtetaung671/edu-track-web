@@ -1,0 +1,6 @@
+<li class="md:p-4 group hover:bg-gray-400 hover:text-white transition-all duration-200 hover:shadow-inner" routerLinkActive="side-bar-active">
+  <a [routerLink]="path()" class="flex justify-center gap-1">
+    <ng-content select="[icon]"></ng-content>
+    <span>{{ title() }}</span>
+  </a>
+</li>
