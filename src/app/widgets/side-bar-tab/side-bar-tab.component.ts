@@ -3,7 +3,7 @@ import { Component, input } from '@angular/core';
 @Component({
   selector: 'app-side-bar-tab',
   templateUrl: './side-bar-tab.component.html',
-  styles: ``
+  styleUrl: `./side-bar-tab.component.scss`
 })
 export class SideBarTabComponent {
 
