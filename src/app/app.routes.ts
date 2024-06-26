@@ -10,6 +10,9 @@ export const routes: Routes = [
   { path: '', component: HomeComponent, title: `Home | ${mainTitle}`, pathMatch: 'full'},
   { path: 'management', component: ManagementsComponent, children: [
     { path: 'course', component: CourseManagementComponent, title: `Course-Managemet | ${mainTitle}`},
-    { path: 'category', component: CategoryManagementComponent, title: `Category-Management | ${mainTitle}`}
-  ]}
+    { path: 'category', component: CategoryManagementComponent, title: `Category-Management | ${mainTitle }`},
+    { path: '**', redirectTo: '/management/category', pathMatch: 'full'}
+
+  ]},
+  { path: '**', redirectTo: '/', pathMatch: 'full'}
 ];
