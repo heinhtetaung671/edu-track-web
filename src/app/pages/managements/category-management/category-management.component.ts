@@ -1,6 +1,7 @@
 import { Component, inject} from '@angular/core';
 import { CategoryEditDialogComponent } from './category-edit-dialog/category-edit-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { CloseScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 @Component({
   selector: 'app-category-management',
   standalone: true,
@@ -11,9 +12,12 @@ import { MatDialog } from '@angular/material/dialog';
 export class CategoryManagementComponent{
 
   readonly dialog = inject(MatDialog);
+  constructor(private scrollOptions: ScrollStrategyOptions) {
+
+  }
 
   openEditDialog() {
-    this.dialog.open(CategoryEditDialogComponent, { width: '90rem', height: '50rem', maxWidth: '100vw', maxHeight: '100vh' });
+    this.dialog.open(CategoryEditDialogComponent, { maxWidth: '100vw', maxHeight: '100vh', panelClass: 'overflow-hidden'});
   }
 
 }
