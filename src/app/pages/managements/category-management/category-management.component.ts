@@ -13,11 +13,16 @@ export class CategoryManagementComponent{
 
   readonly dialog = inject(MatDialog);
   constructor(private scrollOptions: ScrollStrategyOptions) {
-
   }
 
   openEditDialog() {
-    this.dialog.open(CategoryEditDialogComponent, { maxWidth: '100vw', maxHeight: '100vh', panelClass: 'overflow-hidden'});
+    const dialogRef = this.dialog.open(CategoryEditDialogComponent, { maxWidth: '100vw', maxHeight: '100vh', panelClass: 'overflow-hidden'});
+
+    dialogRef.afterClosed().subscribe( result => {
+      if(result.valid) {
+      }
+    })
   }
+
 
 }
