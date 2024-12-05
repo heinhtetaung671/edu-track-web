@@ -1,0 +1,7 @@
+.nav-tab {
+  @apply px-10 py-6 text-gray-600 border-gray-100 hover:text-black hover:border-b-2 border-b-2 hover:border-black transition-all duration-300;
+}
+
+.nav-tab-active {
+ @apply border-black text-black shadow-xl font-semibold;
+}
